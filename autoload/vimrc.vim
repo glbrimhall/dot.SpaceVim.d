@@ -12,6 +12,9 @@ set foldlevel=99
 
 nnoremap 1 za
 
+set wrap linebreak nolist
+set formatoptions=1
+
 endf
 
 func! vimrc#after() abort

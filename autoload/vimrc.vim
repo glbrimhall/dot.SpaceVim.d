@@ -55,24 +55,23 @@ nnoremap w P<Esc>
 "next word
 nnoremap L w<Esc>
            
+"next word
 nnoremap K b<Esc>
            
-           
-"paste
-
-"nnoremap n /
-           
-"repeat last search"
-"nnoremap j n
-           
 "next line
-"nnoremap k p
+nnoremap n j
            
 "prev line
-"nnoremap h k
-           
-"prev char
+nnoremap p k
+
+"next char 
 "          l           "next char
-"nnoremap ; :           ": mode"
+
+"prev char
+nnoremap k h
+           
+nnoremap ; :
+
+nnoremap <CR> i<CR><Esc>
 
 endf

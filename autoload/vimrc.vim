@@ -1,5 +1,4 @@
-func! vimrc#before() abort
-
+func! vimrc#before() abort 
 "" Folding
 let g:neomake_enabled_c_makers = ['clang']
 let g:SimpylFold_docstring_preview=1
@@ -35,43 +34,55 @@ inoremap <C-z> <Esc>
 
 "match boundaries
 nnoremap b %<Esc>
-           
+
 "fold
 nnoremap f za<Esc>
-          
+
 "delete line
 "nnoremap D d<Esc>
 
 nnoremap v V
-           
+
 nnoremap V <C-v>
-       
+
+"line begin
+noremap a 0
+
+"line end
+noremap e $
+
 "prev word
 nnoremap w P<Esc>
 
 "paste
 "undo
-           
+
 "next word
-nnoremap L w<Esc>
-           
-"next word
-nnoremap K b<Esc>
-           
+noremap L w<Esc>
+
+"prev word
+noremap K b<Esc>
+
 "next line
-nnoremap n j
-           
+noremap n j
+inoremap <C-n> <Down>
+
 "prev line
-nnoremap p k
+noremap p k
+inoremap <C-p> <Up>
 
 "next char 
-"          l           "next char
+"          l
+inoremap <C-l> <Right>
 
 "prev char
-nnoremap k h
-           
+noremap k h
+inoremap <C-k> <Left>
+
+": mode
 nnoremap ; :
 
+"i-mode newline
 nnoremap <CR> i<CR><Esc>
 
 endf

@@ -27,6 +27,11 @@
     bootstrap_before = "vimrc#before"
     bootstrap_after = "vimrc#after"
 
+#[[custom_plugins]]
+#name = 'tmhedberg/SimplyFold'
+# note: you need to disable merged feature
+#merged = false
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
@@ -42,12 +47,10 @@ default_height = 30
 name = 'lang#sh'
 
 [[layers]]
-name = "denite"
+name = "fzf"
 
-#[[custom_plugins]]
-#name = 'tmhedberg/SimplyFold'
-# note: you need to disable merged feature
-#merged = false
+[[layers]]
+name = "debug"
 
 [[layers]]
 name = "lang#javascript"
@@ -61,3 +64,5 @@ name = "lang#python"
 [[layers]]
 name = "lang#perl"
 
+[[layers]]
+name = "lang#perl"

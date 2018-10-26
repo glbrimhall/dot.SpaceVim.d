@@ -1,16 +1,13 @@
 func! vimrc#before() abort
 
-    let g:neomake_enabled_c_makers = ['clang']
-    nnoremap jk <Esc>
-
-    let g:SimpylFold_docstring_preview=1
+"" Folding
+let g:neomake_enabled_c_makers = ['clang']
+let g:SimpylFold_docstring_preview=1
 
 set foldmethod=indent
 " set foldnestmax=10
 " set nofoldenable
 set foldlevel=99
-
-nnoremap 1 za
 
 set wrap linebreak nolist
 set formatoptions=1
@@ -24,8 +21,6 @@ set foldmethod=indent
 " set nofoldenable
 set foldlevel=99
 
-nnoremap 1 za
-
 "augroup XML
 "    autocmd!
 "    autocmd FileType xml let g:xml_syntax_folding=1
@@ -33,5 +28,51 @@ nnoremap 1 za
 "    autocmd FileType xml :syntax on
 "    autocmd FileType xml :%foldopen!
 "augroup END
+
+"" Navigation 
+nnoremap <C-z> <Esc>
+inoremap <C-z> <Esc>
+
+"match boundaries
+nnoremap b %<Esc>
+           
+"fold
+nnoremap f za<Esc>
+          
+"delete line
+"nnoremap D d<Esc>
+
+nnoremap v V
+           
+nnoremap V <C-v>
+       
+"prev word
+nnoremap w P<Esc>
+
+"paste
+"undo
+           
+"next word
+nnoremap L w<Esc>
+           
+nnoremap K b<Esc>
+           
+           
+"paste
+
+"nnoremap n /
+           
+"repeat last search"
+"nnoremap j n
+           
+"next line
+"nnoremap k p
+           
+"prev line
+"nnoremap h k
+           
+"prev char
+"          l           "next char
+"nnoremap ; :           ": mode"
 
 endf

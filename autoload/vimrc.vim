@@ -54,6 +54,9 @@ noremap e $
 "prev word
 nnoremap w P<Esc>
 
+"del line above
+nnoremap D :-1d<Cr>
+
 "paste
 "undo
 
@@ -82,7 +85,9 @@ inoremap <C-k> <Left>
 ": mode
 nnoremap ; :
 
-"i-mode newline
+"i mode newline
 nnoremap <CR> i<CR><Esc>
+
+"let mapleader = ","
 
 endf

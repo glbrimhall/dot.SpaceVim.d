@@ -42,6 +42,12 @@ nnoremap f za<Esc>
 "search word
 nnoremap t *
 
+"search word
+nnoremap t *
+
+"search clear 
+nnoremap T :noh<Cr>
+
 "delete line
 "nnoremap D d<Esc>
 
@@ -64,7 +70,8 @@ inoremap <C-w> <Esc>lPi
 "del line above
 nnoremap D :-1d<Cr>
 
-"undo
+"insert endline 
+nnoremap I $a
 
 "next word
 noremap L w<Esc>

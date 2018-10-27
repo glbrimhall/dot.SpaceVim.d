@@ -29,9 +29,9 @@ set foldlevel=99
 "    autocmd FileType xml :%foldopen!
 "augroup END
 
-"" Navigation 
-"nnoremap <C-z> <Esc>
-"inoremap <C-z> <Esc>
+"Escape 
+noremap <C-z> <Esc>
+inoremap <C-z> <Esc>
 
 "match boundaries
 map b %

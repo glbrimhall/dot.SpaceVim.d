@@ -45,6 +45,9 @@ nnoremap v V
 
 nnoremap V <C-v>
 
+
+
+
 "line begin
 noremap a 0
 
@@ -68,10 +71,12 @@ noremap K b<Esc>
 
 "next line
 noremap n j
+noremap N /<Cr>
 inoremap <C-n> <Down>
 
 "prev line
 noremap p k
+noremap P ?<Cr>h 
 inoremap <C-p> <Up>
 
 "next char 

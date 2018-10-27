@@ -29,24 +29,26 @@ set foldlevel=99
 "augroup END
 
 "" Navigation 
-nnoremap <C-z> <Esc>
-inoremap <C-z> <Esc>
+"nnoremap <C-z> <Esc>
+"inoremap <C-z> <Esc>
 
 "match boundaries
-nnoremap b %<Esc>
+nnoremap b <Esc>%
 
 "fold
 nnoremap f za<Esc>
 
+"search word
+nnoremap t *
+
 "delete line
 "nnoremap D d<Esc>
 
+"select line
 nnoremap v V
 
+"select region
 nnoremap V <C-v>
-
-
-
 
 "line begin
 noremap a 0
@@ -66,18 +68,28 @@ nnoremap D :-1d<Cr>
 "next word
 noremap L w<Esc>
 
-"prev word
+prev word
 noremap K b<Esc>
 
 "next line
-noremap n j
-noremap N /<Cr>
+noremap n j 
 inoremap <C-n> <Down>
 
+"next search
+noremap <C-n> /<Cr>
+
+"next page
+nnoremap N <C-f>
+
 "prev line
-noremap p k
-noremap P ?<Cr>h 
+noremap p <Up>
 inoremap <C-p> <Up>
+
+"prev search
+noremap <C-p> ?<Cr>h 
+
+"prev page
+nnoremap P <C-b>
 
 "next char 
 "          l
@@ -88,7 +100,7 @@ noremap k h
 inoremap <C-k> <Left>
 
 ": mode
-nnoremap ; :
+"nnoremap ; :
 
 "i mode newline
 nnoremap <CR> i<CR><Esc>

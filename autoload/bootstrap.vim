@@ -34,8 +34,7 @@ set foldlevel=99
 "inoremap <C-z> <Esc>
 
 "match boundaries
-"IMPORTANT to use nmap
-nmap b %
+map b %
 
 "fold
 nnoremap f za<Esc>
@@ -49,7 +48,6 @@ nnoremap t *
 "select line
 nnoremap v V
 
-
 "select region
 nnoremap V <C-v>
 
@@ -59,13 +57,13 @@ noremap a 0
 "line end
 noremap e $
 
-"prev word
+"paste
 nnoremap w P<Esc>
+inoremap <C-w> <Esc>lPi
 
 "del line above
 nnoremap D :-1d<Cr>
 
-"paste
 "undo
 
 "next word
@@ -79,20 +77,20 @@ noremap n j
 inoremap <C-n> <Down>
 
 "next search
-noremap <C-n> /<Cr>
+nnoremap N /<Cr>
 
 "next page
-nnoremap N <C-f>
+noremap <C-n> <C-f>  
 
 "prev line
 noremap p <Up>
 inoremap <C-p> <Up>
 
 "prev search
-noremap <C-p> ?<Cr>h 
+nnoremap P ?<Cr>h
 
 "prev page
-nnoremap P <C-b>
+noremap <C-p> <C-b>  
 
 "next char 
 "          l

@@ -114,6 +114,12 @@ inoremap <C-k> <Left>
 "i mode newline
 nnoremap <CR> i<CR><Esc>
 
+"compile
+nnoremap 8 :make<Cr>:cw<Cr>
+nnoremap 9 :cn<Cr>
+nnoremap 0 :cp<Cr>
+"nnoremap <M-l> :cl<Cr>
+
 "let mapleader = ","
 
 endf

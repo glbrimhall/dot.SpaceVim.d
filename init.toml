@@ -57,7 +57,10 @@ name = "fzf"
 name = "debug"
 
 [[layers]]
-name = "lang#javascript"
+name = "lang#c"
+
+[[layers]]
+name = "lang#java"
 
 [[layers]]
 name = "lang#java"

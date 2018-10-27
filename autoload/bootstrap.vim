@@ -91,6 +91,7 @@ noremap <C-n> <C-f>
 
 "prev line
 noremap p <Up>
+noremap j <Up>
 inoremap <C-p> <Up>
 
 "prev search

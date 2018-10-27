@@ -13,7 +13,6 @@
     # layer
     colorscheme = "molokai"
     background = "dark"
-    colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -25,22 +24,22 @@
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = true
     filemanager = "nerdtree"
-    bootstrap_before = "vimrc#before"
-    bootstrap_after = "vimrc#after"
+    bootstrap_before = "bootstrap#before"
+    bootstrap_after = "bootstrap#after"
 
 #[[custom_plugins]]
 #name = 'tmhedberg/SimplyFold'
 # note: you need to disable merged feature
 #merged = false
 
-# Enable colorschemes 
-[[layers]]
-name = 'colorscheme'
-
 [[layers]]
 name = 'autocomplete'
 auto-completion-return-key-behavior = "complete"
 auto-completion-tab-key-behavior = "smart"
+
+# Enable colorschemes 
+[[layers]]
+name = 'colorscheme'
 
 [[layers]]
 name = 'shell'

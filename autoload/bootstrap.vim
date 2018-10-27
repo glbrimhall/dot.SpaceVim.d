@@ -1,4 +1,5 @@
-func! vimrc#before() abort 
+
+func! bootstrap#before() abort 
 "" Folding
 let g:neomake_enabled_c_makers = ['clang']
 let g:SimpylFold_docstring_preview=1
@@ -13,7 +14,7 @@ set formatoptions=1
 
 endf
 
-func! vimrc#after() abort
+func! bootstrap#after() abort
 
 set foldmethod=indent
 " set foldnestmax=10
@@ -33,7 +34,7 @@ set foldlevel=99
 "inoremap <C-z> <Esc>
 
 "match boundaries
-nnoremap b <Esc>%
+nnoremap b %
 
 "fold
 nnoremap f za<Esc>
@@ -46,6 +47,7 @@ nnoremap t *
 
 "select line
 nnoremap v V
+
 
 "select region
 nnoremap V <C-v>
@@ -68,7 +70,7 @@ nnoremap D :-1d<Cr>
 "next word
 noremap L w<Esc>
 
-prev word
+"prev word
 noremap K b<Esc>
 
 "next line

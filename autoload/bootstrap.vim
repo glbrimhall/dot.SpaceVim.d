@@ -34,7 +34,8 @@ set foldlevel=99
 "inoremap <C-z> <Esc>
 
 "match boundaries
-nnoremap b %
+"IMPORTANT to use nmap
+nmap b %
 
 "fold
 nnoremap f za<Esc>

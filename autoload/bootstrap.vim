@@ -8,6 +8,6 @@ endf
 
 func! bootstrap#after() abort
 
-source ./vimrc
+source ../vimrc
 
 endf

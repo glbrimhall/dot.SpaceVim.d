@@ -30,8 +30,8 @@ set foldlevel=99
 "augroup END
 
 "Escape 
-noremap <C-z> <Esc>
-inoremap <C-z> <Esc>
+noremap <C-x> <Esc>
+inoremap <C-x> <Esc>
 
 "match boundaries
 map b %
@@ -53,6 +53,9 @@ nnoremap T :noh<Cr>
 
 "redo
 noremap <C-u> <C-r>
+
+"undo
+inoremap <C-u> <Esc>ui
 
 "select line
 nnoremap v V

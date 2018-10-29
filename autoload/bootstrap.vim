@@ -77,7 +77,7 @@ inoremap <C-w> <Esc>lPi
 nnoremap D :-1d<Cr>
 
 "insert endline 
-nnoremap I $a
+"nnoremap I $a
 
 "next word
 noremap L w<Esc>
@@ -86,7 +86,7 @@ noremap L w<Esc>
 noremap K b<Esc>
 
 "next line
-noremap n j 
+noremap n <Down>
 inoremap <C-n> <Down>
 
 "next search

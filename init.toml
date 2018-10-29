@@ -24,7 +24,8 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = true
-    filemanager = "vimfiler"
+    # filemanager = "vimfiler", "ctrlp" -> "denite"
+    filemanager = "nerdtree"
     bootstrap_before = "bootstrap#before"
     bootstrap_after = "bootstrap#after"
 
@@ -48,13 +49,13 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
-name = 'lang#sh'
-
-[[layers]]
-name = "denite"
+name = "ctrlp"
 
 [[layers]]
 name = "debug"
+
+[[layers]]
+name = 'lang#sh'
 
 [[layers]]
 name = "lang#c"
@@ -63,7 +64,10 @@ name = "lang#c"
 name = "lang#java"
 
 [[layers]]
-name = "lang#java"
+name = "lang#javascript"
+
+[[layers]]
+name = "lang#typescript"
 
 [[layers]]
 name = "lang#python"
@@ -72,4 +76,13 @@ name = "lang#python"
 name = "lang#perl"
 
 [[layers]]
-name = "lang#perl"
+name = "lang#html"
+
+[[layers]]
+name = "lang#markdown"
+
+[[layers]]
+name = "lang#php"
+
+[[layers]]
+name = "lang#dockerfile"

@@ -51,6 +51,9 @@ nnoremap T :noh<Cr>
 "delete line
 "nnoremap D d<Esc>
 
+"redo
+noremap <C-u> <C-r>
+
 "select line
 nnoremap v V
 
@@ -119,6 +122,9 @@ nnoremap 8 :make<Cr>:cw<Cr>
 nnoremap 9 :cn<Cr>
 nnoremap 0 :cp<Cr>
 "nnoremap <M-l> :cl<Cr>
+
+"explorer
+nnoremap <C-f> :tabnew<Cr>:ex .<Cr>
 
 "let mapleader = ","
 

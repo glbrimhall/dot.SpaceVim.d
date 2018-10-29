@@ -10,7 +10,7 @@ sudo bash nodesource_setup.sh
 
 rm nodesource_setup.sh
 
-sudo apt-get install nodejs vim ruby
+sudo apt-get install nodejs vim
 
 nodejs -v
 

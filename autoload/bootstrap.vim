@@ -127,7 +127,7 @@ nnoremap 0 :cp<Cr>
 "nnoremap <M-l> :cl<Cr>
 
 "explorer
-nnoremap <C-f> :tabnew<Cr>:ex .<Cr>
+nnoremap <C-a> :tabnew<Cr>:ex .<Cr>
 
 "let mapleader = ","
 

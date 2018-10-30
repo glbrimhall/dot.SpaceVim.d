@@ -15,8 +15,8 @@ set formatoptions=1
 "augroup END
 
 "Escape 
-noremap <C-x> <Esc>
-inoremap <C-x> <Esc>
+noremap <C-z> <Esc>
+inoremap <C-z> <Esc>
 
 "match boundaries
 map b %
@@ -36,6 +36,12 @@ nnoremap T :noh<Cr>
 "delete line
 "nnoremap D d<Esc>
 
+"delete char right
+inoremap <C-x> <Esc>lxi
+
+"delete char left 
+inoremap <C-d> <Esc>lXi
+
 "redo
 noremap <C-u> <C-r>
 
@@ -50,9 +56,11 @@ nnoremap V <C-v>
 
 "line begin
 noremap a 0
+inoremap <C-a> <Esc>0i
 
 "line end
 noremap e $
+inoremap <C-e> <Esc>$i
 
 "paste
 nnoremap w P<Esc>

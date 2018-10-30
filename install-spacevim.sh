@@ -10,7 +10,9 @@ sudo bash nodesource_setup.sh
 
 rm nodesource_setup.sh
 
-sudo apt-get install nodejs vim
+sudo apt-get install -y nodejs vim-nox 
+#if there are errors with <Esc>, install the following
+sudo apt-get install -y fcitx-frontend-fbterm fcitx
 
 nodejs -v
 
@@ -24,7 +26,9 @@ for MODULE in $NPM_MODULES; do
   npm install -g $MODULE
 done
 
+
 # install spacevim
 cd ~ 
+ln -sf dot.SpaceVim.d .SpaceVim.d
 curl -sLf https://spacevim.org/install.sh | bash
 

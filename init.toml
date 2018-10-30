@@ -24,15 +24,25 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = true
-    # filemanager = "vimfiler", "ctrlp" -> "denite"
-    filemanager = "nerdtree"
+    filemanager = "vimfiler"
+    #filemanager = "nerdtree"
     bootstrap_before = "bootstrap#before"
     bootstrap_after = "bootstrap#after"
 
-#[[custom_plugins]]
-#name = 'tmhedberg/SimplyFold'
+[[custom_plugins]]
+name = 'othree/xml.vim'
 # note: you need to disable merged feature
-#merged = false
+merged = 0 
+
+#[[custom_plugins]]
+#name = 'tpope/vim-repeat'
+## note: you need to disable merged feature
+#merged = 0 
+
+#[[custom_plugins]]
+#name = 'tpope/vim-surround'
+## note: you need to disable merged feature
+#merged = 0 
 
 [[layers]]
 name = 'autocomplete'
@@ -49,7 +59,10 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
-name = "ctrlp"
+name = "denite"
+
+#[[layers]]
+#name = "ctrlp"
 
 [[layers]]
 name = "debug"

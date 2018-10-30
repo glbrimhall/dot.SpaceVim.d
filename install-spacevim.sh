@@ -12,7 +12,7 @@ rm nodesource_setup.sh
 
 sudo apt-get install -y nodejs vim-nox 
 #if there are errors with <Esc>, install the following
-#sudo apt-get install -y fcitx-frontend-fbterm fcitx
+sudo apt-get install -y fcitx-frontend-fbterm fcitx
 
 nodejs -v
 

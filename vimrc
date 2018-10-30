@@ -105,6 +105,9 @@ inoremap <C-k> <Left>
 "i mode newline
 nnoremap <CR> i<CR><Esc>
 
+"window switch
+noremap <Tab> <C-w>w
+
 "compile
 nnoremap 8 :make<Cr>:cw<Cr>
 nnoremap 9 :cn<Cr>

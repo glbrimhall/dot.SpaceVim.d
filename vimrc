@@ -6,13 +6,32 @@ set foldlevel=99
 set wrap linebreak nolist
 set formatoptions=1
 
-"augroup XML
-"    autocmd!
-"    autocmd FileType xml let g:xml_syntax_folding=1
-"    autocmd FileType xml setlocal foldmethod=syntax
-"    autocmd FileType xml :syntax on
-"    autocmd FileType xml :%foldopen!
-"augroup END
+"{{{ no_spacevim
+if !exists("g:spacevim_windows_leader")
+
+  augroup XML
+      autocmd!
+      autocmd FileType xml,ui,xhtml,html,xsd let g:xml_syntax_folding=1
+      "autocmd FileType xml,ui,xhtml,html,xsd setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+      autocmd FileType xml,ui,xhtml,html,xsd setlocal foldmethod=syntax
+      autocmd FileType xml,ui,xhtml,html,xsd :syntax on
+      "autocmd FileType xml,ui,xhtml,html,xsd normal zR 
+      "autocmd FileType xml,ui,xhtml,html,xsd :%foldopen!
+  augroup END
+  
+  "matchit
+  source ~/.SpaceVim.d/plugin/matchit.vim
+  :helptags ~/.SpaceVim.d/doc
+  
+  "rebuild help:
+  ":help add-local-help
+  
+  :filetype plugin on
+  :color slate
+  ":color desert
+
+endif
+"}}} no_spacevim
 
 "Escape 
 noremap <C-z> <Esc>

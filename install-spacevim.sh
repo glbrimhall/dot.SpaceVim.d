@@ -28,7 +28,8 @@ done
 
 
 # install spacevim
-cd ~ 
-ln -sf dot.SpaceVim.d .SpaceVim.d
+cd ~
+mkdir github && mv dot.SpaceVim.d github
+ln -sf ~/github/dot.SpaceVim.d .SpaceVim.d
 curl -sLf https://spacevim.org/install.sh | bash
 

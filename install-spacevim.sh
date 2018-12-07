@@ -6,11 +6,11 @@
 
 curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 
-sudo bash nodesource_setup.sh
+bash nodesource_setup.sh
 
 rm nodesource_setup.sh
 
-sudo apt-get install -y nodejs vim-nox 
+apt-get install -y nodejs vim-nox 
 #if there are errors with <Esc>, install the following
 #sudo apt-get install -y fcitx-frontend-fbterm fcitx
 

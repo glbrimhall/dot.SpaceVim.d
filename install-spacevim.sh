@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#set -x
+
+MODE=${1:-install}
+
+if [ "$MODE" = "install" ]; then
+
 #apt-get purge -y emacs-nox
 #apt-get autoremove -y --purge
 #apt-get install emacs25-nox
@@ -30,3 +36,26 @@ done
 # install spacevim
 cd ~ && curl -sLf https://spacevim.org/install.sh | bash
 
+fi
+if [ "$MODE" = "uninstall" ]; then
+
+RMDIR="\
+.SpaceVim \
+.viminfo \
+.vim \
+.config/nvim \
+.cache/neocomplete \
+.cache/neomru \
+.cache/neosnippet \
+.cache/neoyank \
+.cache/SpaceVim \
+.cache/vimfiler \
+.cache/vimfiles"
+
+cd ~
+for DIR in $RMDIR; do
+  echo "rm -fr \"$DIR\""
+  rm -fr "$DIR"
+done
+
+fi

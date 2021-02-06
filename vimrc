@@ -3,38 +3,49 @@ set foldmethod=indent
 " set foldnestmax=10
 " set nofoldenable
 set foldlevel=99
-" spacebar folding
-nnoremap <space> za
 
 set wrap linebreak nolist
 set formatoptions=1
 
-" to open a file
-":e <filename>
-" to open a dir
-":e .
+" block edit shortcuts:
+" https://stackoverflow.com/questions/9549729/vim-insert-the-same-characters-across-multiple-lines
 
 " python indentation
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+au BufNewFile,BufRead *.py set 
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ autoindent
+    \ smartindent
+    \ smarttab
+    \ expandtab
+    \ fileformat=unix
+    \ number
+
+" make backspaces more powerfull
+set backspace=indent,eol,start
+
+" show (partial) command in status line
+set showcmd
+
+" auto change to dir of current file
+set autochdir
 
 " other code indentation
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.js, *.html, *.css set
+    \ tabstop=2
+    \ softtabstop=2
+    \ shiftwidth=2
 
 " make extra whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " default utf-8
 set encoding=utf-8
+
+" show ruler
+set ruler
 
 "{{{ no_spacevim
 if !exists("g:spacevim_windows_leader")
@@ -78,7 +89,10 @@ inoremap <C-z> <Esc>
 map b %
 
 "fold
-nnoremap f za<Esc>
+nnoremap <space> za<Esc>
+
+"file open
+noremap f :e .<cr>
 
 "search word
 nnoremap t *
@@ -172,6 +186,18 @@ inoremap <C-l> <Right>
 noremap k h
 inoremap <C-k> <Left>
 
+" From https://vi.stackexchange.com/questions/5531/how-to-remap-i-in-netrw
+augroup netrw_mapping
+    autocmd!
+    autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+    noremap <buffer> k h
+    noremap <buffer> p <Up>h 
+    noremap <buffer> n <Down>
+endfunction
+
 "move to split above
 nnoremap <C-P> <C-W><C-K>
 
@@ -189,6 +215,11 @@ nnoremap <C-L> <C-W><C-H>
 
 "i mode newline:
 nnoremap <CR> i<CR><Esc>
+
+" From https://stackoverflow.com/questions/13701506/vim-quick-column-insert
+"vnoremap <C-Space> I<Space><Esc>gv
+"vnoremap <C-S-Space> A<Space><Esc>gv
+set virtualedit=block
 
 "Window switch
 noremap b gt 

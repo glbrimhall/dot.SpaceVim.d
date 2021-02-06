@@ -1,10 +1,40 @@
+" From https://realpython.com/vim-and-python-a-match-made-in-heaven/
 set foldmethod=indent
 " set foldnestmax=10
 " set nofoldenable
 set foldlevel=99
+" spacebar folding
+nnoremap <space> za
 
 set wrap linebreak nolist
 set formatoptions=1
+
+" to open a file
+":e <filename>
+" to open a dir
+":e .
+
+" python indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" other code indentation
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+" make extra whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" default utf-8
+set encoding=utf-8
 
 "{{{ no_spacevim
 if !exists("g:spacevim_windows_leader")
@@ -20,15 +50,22 @@ if !exists("g:spacevim_windows_leader")
   augroup END
   
   "matchit
-  source ~/.SpaceVim.d/plugin/matchit.vim
-  :helptags ~/.SpaceVim.d/doc
+  "source ~/.SpaceVim.d/plugin/matchit.vim
+  ":helptags ~/.SpaceVim.d/doc
   
   "rebuild help:
   ":help add-local-help
   
   :filetype plugin on
-  :color slate
-  ":color desert
+  ":color slate
+  :color desert
+
+" hilighting
+let python_highlight_all=1
+syntax on
+
+" line numbering
+set nu
 
 endif
 "}}} no_spacevim
@@ -72,6 +109,15 @@ nnoremap v V
 
 "select region
 nnoremap V <C-v>
+
+"split screen
+nnoremap 2 :sp<cr>
+
+"unsplit screen
+nnoremap 1 :on<cr>
+
+"new window
+nnoremap 3 :tab split<cr>
 
 "line begin
 noremap a 0
@@ -126,14 +172,31 @@ inoremap <C-l> <Right>
 noremap k h
 inoremap <C-k> <Left>
 
+"move to split above
+nnoremap <C-P> <C-W><C-K>
+
+"move to split below
+nnoremap <C-N> <C-W><C-J>
+
+"move to split right
+nnoremap <C-K> <C-W><C-L>
+
+"move to split left
+nnoremap <C-L> <C-W><C-H>
+
 ": mode
 "nnoremap ; :
 
-"i mode newline
+"i mode newline:
 nnoremap <CR> i<CR><Esc>
 
-"window switch
-noremap <Tab> <C-w>w
+"Window switch
+noremap b gt 
+inoremap <C-b> gt 
+
+"Split Window switch
+noremap o <C-w>w 
+inoremap <C-o> <C-w>w 
 
 "compile
 nnoremap 8 :make<Cr>:cw<Cr>
